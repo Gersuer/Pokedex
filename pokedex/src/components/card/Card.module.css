@@ -1,0 +1,79 @@
+.button_card{
+    border: none;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 220px;
+    height: 130px;
+    background: #ffff;
+    box-shadow: 0 1px 25px rgba(0, 0, 0, 0.2);
+    padding: 12px 10px;
+    gap: 1.5rem;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_load {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: load89234 2s infinite;
+}
+
+.card_load img {
+    width: 80%;
+    height: 80%;
+}
+
+.card_load_extreme_title {
+    min-width: 10px;
+    min-height: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: load89234 2s infinite;
+}
+
+
+.card_load_extreme_descripion {
+    min-width: 100px;
+    min-height: 47px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);
+    margin-top: 10px;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: load89234 2s infinite;
+}
+
+
+@keyframes load89234 {
+    100% {
+        background-position: -100% 0;
+    }
+}
