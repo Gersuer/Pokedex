@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { ReactNode, createContext, useState, useEffect } from "react";
 import axios from "axios";
 
@@ -12,6 +13,7 @@ interface ListProps {
     name: string
     url: string
 }
+
 export const PokeContext = createContext({} as PokeContextProps);
 
 function PokemonProvider({ children }: ChildrenProps) {
@@ -20,19 +22,19 @@ function PokemonProvider({ children }: ChildrenProps) {
 
     useEffect(() => {
         async function fetchData() {
-            const data = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=151&offset=0')
+            await axios.get('https://pokeapi.co/api/v2/pokemon?limit=151&offset=0')
                 .then((result) => {
                     if (result) {
-                        const listaTotal: ListProps[] = [];
-                        const resposta = result.data.results.map((item: ListProps) => {
-                            listaTotal.push(
+                        const copia = [...list]
+                        result.data.results.map((item: ListProps) => {
+                            copia.push(
                                 {
                                     name: item.name,
                                     url: item.url
                                 }
                             )
                         });
-                        setList(...list, listaTotal);
+                        setList(copia);
                     }
                 })
                 .catch(err => console.log(err));

@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import styles from './Card.module.css';
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
@@ -21,7 +22,7 @@ const Card = ({ url }: UrlProps) => {
 
     useEffect(() => {
         async function pokeData() {
-            const data = await axios.get(url)
+             await axios.get(url)
                 .then((result) => {
                     let pokemonInfo = {
                         name: result.data.name,

@@ -8,7 +8,7 @@ const Details = () => {
   const { id } = useParams();
   const [pokemonInfo, setPokemonInfo] = useState<PokemonProps>();
   useEffect(() => {
-    const pokemonDetails: Promise<void> = axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
+    axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
       .then((result) => {
         console.log(result.data)
         const teste = result.data.name;

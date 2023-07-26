@@ -2,7 +2,6 @@ import Card from '../../components/card/Card'
 import styles from './List.module.css'
 import { PokeContext } from '../../context/PokemonContext'
 import { useContext } from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
 const List = () => {
   const { list, loading } = useContext(PokeContext);
 

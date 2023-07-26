@@ -1,5 +1,4 @@
 import styles from './Home.module.css'
-import background from '../../assets/backgorund-logo.svg'
 
 const Home = () => {
   return (
